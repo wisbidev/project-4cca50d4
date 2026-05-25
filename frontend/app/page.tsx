@@ -1,3 +1,4 @@
+import AIAgents from "@/components/AIAgents";
 import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
           </h2>
         </div>
       </section>
+      <AIAgents />
     </main>
   );
 }
