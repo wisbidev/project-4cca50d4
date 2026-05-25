@@ -56,7 +56,7 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
   };
 
   const content = (
-    <div className="relative flex min-h-screen flex-col items-center justify-center px-4 overflow-hidden">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4">
       {/* Background gradient */}
       <div
         className="absolute inset-0"
