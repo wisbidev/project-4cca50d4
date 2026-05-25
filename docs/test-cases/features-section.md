@@ -1,46 +1,86 @@
-# Test Cases: Features Section
+# Test Cases — Features Section
 
-## F4 — Features Section
+## Section Rendering
 
-### Scenario 1: Section renders with title and 6-card grid (desktop)
-**Given**: The landing page is loaded at any viewport width ≥ 1024px
-**When**: The user scrolls to the Features section
-**Then**: The section displays the title **"Tự động hóa toàn bộ quy trình phát triển phần mềm"** and a 3×2 grid of 6 feature cards, each with an outline icon and title, with fade-in animation
+**Scenario**: Section renders with correct title
+**Given**: The Features section is in view
+**When**: The page loads and scrolls to the Features section
+**Then**: The section displays the title "Tự động hóa toàn bộ quy trình phát triển phần mềm"
 
-### Scenario 2: Each feature card shows icon, title, and description
+**Scenario**: Section has correct section ID
+**Given**: The Features component is rendered
+**When**: Inspecting the section element
+**Then**: The section has `id="features"`
+
+## Feature Cards — Content
+
+**Scenario**: All 6 feature cards are rendered
 **Given**: The Features section is visible
-**When**: The user reads the first feature card
-**Then**: The card shows an outline icon, the title **"Telegram chat"**, and the description "Gửi yêu cầu bằng tiếng Việt, nhận kết quả realtime"
-**When**: The user reads the second feature card
-**Then**: The card shows an outline icon, the title **"Không cần quản lý team"**, and the description "AI tự động phân việc, review và test"
-**When**: The user reads the third feature card
-**Then**: The card shows an outline icon, the title **"Tự động GitHub repo"**, and the description "Code và PR được tạo tự động"
-**When**: The user reads the fourth feature card
-**Then**: The card shows an outline icon, the title **"Estimate trước build"**, and the description "Báo giá và thời gian trước khi build"
-**When**: The user reads the fifth feature card
-**Then**: The card shows an outline icon, the title **"Auto deploy"**, and the description "Deploy lên production sau mỗi feature hoàn thành"
-**When**: The user reads the sixth feature card
-**Then**: The card shows an outline icon, the title **"Realtime tracking"**, and the description "Theo dõi tiến độ qua Telegram group"
+**When**: Counting the feature cards inside the section
+**Then**: Exactly 6 feature cards are displayed
 
-### Scenario 3: Cards have dark card styling with light border
+**Scenario**: Card 1 — Telegram chat
 **Given**: The Features section is visible
-**When**: The user inspects any feature card
-**Then**: The card has a dark background (`#1E293B`), a light border (`#334155`), and rounded corners
+**When**: Looking at the first feature card
+**Then**: The card shows title "Telegram chat" and description "Gửi yêu cầu bằng tiếng Việt, nhận kết quả realtime"
 
-### Scenario 4: Hover glow effect on feature cards
-**Given**: The user is viewing a feature card
-**When**: The user hovers the cursor over a feature card
-**Then**: The card displays a blue glow shadow (`box-shadow` with `#3B82F6` at ~0.4 opacity), and the border color transitions to blue
+**Scenario**: Card 2 — Không cần quản lý team
+**Given**: The Features section is visible
+**When**: Looking at the second feature card
+**Then**: The card shows title "Không cần quản lý team" and description "AI tự động phân việc, review và test"
 
-### Scenario 5: Responsive — 2-column grid on tablet, 1-column on mobile
-**Given**: The page is viewed at a viewport width between 640px and 1023px
-**When**: The user scrolls to the Features section
-**Then**: The 6 feature cards are displayed in a 2×3 grid (2 columns)
-**Given**: The page is viewed at a viewport width < 640px
-**When**: The user scrolls to the Features section
-**Then**: The 6 feature cards are stacked in a single column layout
+**Scenario**: Card 3 — Tự động GitHub repo
+**Given**: The Features section is visible
+**When**: Looking at the third feature card
+**Then**: The card shows title "Tự động GitHub repo" and description "Code và PR được tạo tự động"
 
-### Scenario 6: Fade-in stagger animation on scroll
-**Given**: The page is loaded and the Features section is below the viewport
-**When**: The user scrolls down until the section enters the viewport
-**Then**: The section title and feature cards animate in with a fade-in + slide-up effect, with cards appearing in staggered sequence
+**Scenario**: Card 4 — Estimate trước build
+**Given**: The Features section is visible
+**When**: Looking at the fourth feature card
+**Then**: The card shows title "Estimate trước build" and description "Báo giá và thời gian trước khi build"
+
+**Scenario**: Card 5 — Auto deploy
+**Given**: The Features section is visible
+**When**: Looking at the fifth feature card
+**Then**: The card shows title "Auto deploy" and description "Deploy lên production sau mỗi feature hoàn thành"
+
+**Scenario**: Card 6 — Realtime tracking
+**Given**: The Features section is visible
+**When**: Looking at the sixth feature card
+**Then**: The card shows title "Realtime tracking" and description "Theo dõi tiến độ qua Telegram group"
+
+## Feature Cards — Visual
+
+**Scenario**: Each card displays an outline icon
+**Given**: A feature card is rendered
+**When**: Inspecting the card's content
+**Then**: The card contains an outline-style icon (SVG) before the title
+
+**Scenario**: Cards render in a responsive grid layout
+**Given**: The Features section is rendered
+**When**: Checking the grid layout at different viewports
+**Then**: Cards are arranged as 1 column on mobile (< 640px), 2 columns on tablet (640–1023px), and 3 columns on desktop (≥ 1024px)
+
+## Animations & Interaction
+
+**Scenario**: Cards fade in on scroll
+**Given**: The page has just loaded and the Features section is below the viewport
+**When**: Scrolling down until the Features section enters the viewport
+**Then**: Feature cards animate in with a fade-in and slide-up effect, staggered one after another
+
+**Scenario**: Hover glow effect on cards
+**Given**: A feature card is visible
+**When**: Hovering the cursor over the card
+**Then**: The card shows a blue glow effect (`box-shadow` with `#3B82F6`)
+
+**Scenario**: Animations disabled when prefers-reduced-motion is set
+**Given**: The user's system has `prefers-reduced-motion: reduce` enabled
+**When**: The page loads and the Features section enters the viewport
+**Then**: Feature cards appear immediately without fade/slide animations
+
+## Responsive
+
+**Scenario**: No horizontal scroll on mobile
+**Given**: The Features section is rendered
+**When**: Viewing at 320px viewport width
+**Then**: All feature cards fit without causing horizontal scroll
