@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   title: "AI Team — Build phần mềm tự động qua Telegram",
   description:
     "Nền tảng AI tự động build phần mềm. Gửi ý tưởng qua Telegram, nhận sản phẩm hoàn chỉnh.",
-  lang: "vi",
   openGraph: {
     title: "AI Team — Build phần mềm tự động qua Telegram",
     description:
