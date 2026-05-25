@@ -41,7 +41,7 @@ export default function Footer({ className = "" }: FooterProps) {
         variants={prefersReducedMotion ? {} : itemVariants}
       >
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white font-bold">
+          <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-sm font-bold text-white">
             AI
           </div>
           <span className="text-lg font-semibold text-text">aiteam</span>
