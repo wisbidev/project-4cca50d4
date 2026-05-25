@@ -20,7 +20,7 @@ const steps = [
   },
   {
     icon: "⚙️",
-    title: "Dev & Test tự động build",
+    title: "Auto build",
     description: "Dev Agent viết code, Test Agent kiểm tra tự động",
   },
   {
