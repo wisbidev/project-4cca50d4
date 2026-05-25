@@ -83,7 +83,7 @@ export default function TechStackSection({ className = "" }: TechStackSectionPro
           {technologies.map((tech, index) => (
             <motion.div
               key={index}
-              className="group rounded-full border border-slate-700 bg-card px-6 py-3 transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
+              className="rounded-full border border-slate-700 bg-card px-6 py-3 transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
               variants={prefersReducedMotion ? {} : itemVariants}
             >
               <div className="flex items-center gap-2">
