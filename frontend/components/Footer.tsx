@@ -40,7 +40,6 @@ export default function Footer({ className = "" }: FooterProps) {
         viewport={{ once: true }}
         variants={prefersReducedMotion ? {} : itemVariants}
       >
-        {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white font-bold">
             AI
@@ -48,7 +47,6 @@ export default function Footer({ className = "" }: FooterProps) {
           <span className="text-lg font-semibold text-text">aiteam</span>
         </div>
 
-        {/* Links */}
         <div className="flex items-center gap-6">
           <a
             href="https://t.me/aiteam_bot"
@@ -88,7 +86,6 @@ export default function Footer({ className = "" }: FooterProps) {
           </a>
         </div>
 
-        {/* Copyright */}
         <div className="text-center text-sm text-muted md:text-right">
           © 2025 aiteam. All rights reserved.
         </div>
