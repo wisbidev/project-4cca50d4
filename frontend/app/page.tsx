@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import FinalCTA from "@/components/FinalCTA";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           </h2>
         </div>
       </section>
+      <FinalCTA />
     </main>
   );
 }
