@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import Features from "@/components/Features";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           </h2>
         </div>
       </section>
+      <Features />
     </main>
   );
 }
