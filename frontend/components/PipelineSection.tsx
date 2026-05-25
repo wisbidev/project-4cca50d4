@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface PipelineSectionProps {
   className?: string;
@@ -16,11 +16,11 @@ const steps = [
   {
     icon: "📋",
     title: "AI lên kế hoạch",
-    description: "PM Agent phân tích và tạo kế hoạch chi tiết",
+    description: "PM Agent phân tích, estimate và tạo kế hoạch chi tiết",
   },
   {
     icon: "⚙️",
-    title: "Dev & Test build",
+    title: "Dev & Test tự động build",
     description: "Dev Agent viết code, Test Agent kiểm tra tự động",
   },
   {
@@ -72,20 +72,16 @@ export default function PipelineSection({ className = "" }: PipelineSectionProps
       variants={prefersReducedMotion ? {} : itemVariants}
       className="relative flex flex-1 flex-col items-center text-center"
     >
-      {/* Connector line */}
       {index < steps.length - 1 && (
         <div className="absolute left-1/2 top-10 z-0 hidden h-0.5 w-full bg-gradient-to-r from-primary/50 to-primary md:block" />
       )}
 
-      {/* Step number badge */}
       <div className="relative z-10 mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-card shadow-[0_0_20px_rgba(59,130,246,0.3)]">
         <span className="text-3xl">{step.icon}</span>
       </div>
 
-      {/* Step title */}
       <h3 className="mb-2 text-lg font-semibold text-text">{step.title}</h3>
 
-      {/* Step description */}
       <p className="max-w-[200px] text-sm text-muted">{step.description}</p>
     </motion.div>
   );
@@ -93,7 +89,6 @@ export default function PipelineSection({ className = "" }: PipelineSectionProps
   return (
     <section id="pipeline" className={`bg-background py-20 ${className}`}>
       <div className="mx-auto max-w-7xl px-4">
-        {/* Section title */}
         <motion.h2
           className="mb-16 text-center text-3xl font-bold text-text md:text-4xl"
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 20 }}
@@ -103,7 +98,6 @@ export default function PipelineSection({ className = "" }: PipelineSectionProps
           Từ ý tưởng đến deploy hoàn toàn tự động
         </motion.h2>
 
-        {/* Steps container */}
         <motion.div
           className="flex flex-col gap-8 md:flex-row md:gap-4"
           variants={prefersReducedMotion ? {} : containerVariants}
