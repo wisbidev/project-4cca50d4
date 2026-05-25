@@ -74,7 +74,7 @@ export default function TechStackSection({ className = "" }: TechStackSectionPro
         </motion.p>
 
         <motion.div
-          className="flex flex flex-wrap justify-center gap-4"
+          className="flex flex-wrap justify-center gap-4"
           variants={prefersReducedMotion ? {} : containerVariants}
           initial="hidden"
           whileInView="visible"
