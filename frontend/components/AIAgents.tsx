@@ -105,7 +105,7 @@ export default function AIAgents({ className = "" }: AIAgentsProps) {
         </motion.h2>
 
         <motion.div
-          className="grid grid-cols-1 gap-6 lg:grid-cols-2"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2"
           variants={prefersReducedMotion ? {} : containerVariants}
           initial="hidden"
           whileInView="visible"
