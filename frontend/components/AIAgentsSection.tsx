@@ -97,7 +97,7 @@ export default function AIAgentsSection({ className = "" }: AIAgentsSectionProps
           {agents.map((agent, index) => (
             <motion.div
               key={index}
-              className="group rounded-xl border border-slate-700 bg-card p-6 transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
+              className="rounded-xl border border-slate-700 bg-card p-6 transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
               variants={prefersReducedMotion ? {} : itemVariants}
             >
               <div className="mb-4 flex items-center gap-3">
