@@ -70,7 +70,7 @@ export default function FinalCTA({ className = "" }: FinalCTAProps) {
             href={TELEGRAM_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-lg bg-primary px-10 py-4 text-lg font-semibold text-white transition-shadow hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
+            className="inline-block rounded-lg bg-primary px-10 py-4 text-lg font-semibold text-white transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
           >
             Chat qua Telegram
           </a>
